@@ -1,0 +1,8 @@
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tr *ngFor="let zone of zones">
+        <td><a [routerLink]="['/zone', zone.id]">{{zone.name}}</a></td>
+    </tr>
+</table>

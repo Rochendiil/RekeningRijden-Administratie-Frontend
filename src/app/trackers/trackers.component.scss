@@ -1,0 +1,9 @@
+
+@import "../list";
+
+.tracker-table {
+
+    tr:nth-child(odd) {
+        background: darken(white, 10%);
+    }
+}

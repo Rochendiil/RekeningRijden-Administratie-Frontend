@@ -1,0 +1,48 @@
+
+<form [formGroup]="form">
+    <table>
+        <input type="hidden" formControlName="id">
+        <tr>
+            <th>Brand</th>
+            <td><input type="text" formControlName="brand"></td>
+        </tr>
+        <tr>
+            <th>Model</th>
+            <td><input type="text" formControlName="model"></td>
+        </tr>
+        <tr>
+            <th>License number</th>
+            <td><input type="text" formControlName="licenseNumber"></td>
+        </tr>
+        <tr>
+            <th>Build year</th>
+            <td><input type="text" formControlName="buildYear"></td>
+        </tr>
+        <tr>
+            <th>Tracker Id</th>
+            <td><input type="text" formControlName="trackerId"></td>
+        </tr>
+        <tr>
+            <td>
+                <form [formGroup]="searchForm" autocomplete="off">
+                    <input autocomplete="off" formControlName="query" type="text" id="keyword" placeholder="Search for users" />
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul class="filter-select">
+                    <li *ngFor="let owner of foundOwners" class="filter-select-list">
+                        <p (click)="setOwner(owner)" class="name">{{owner.lastname}}, {{owner.firstname}}, {{owner.city}} {{owner.address}}</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button (click)="saveVehicle()">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,44 @@
+<p>
+  {{zone.name}} <br>
+  basic rate: {{zone.basicRate}}
+</p>
+<form [formGroup]="form">
+  <table>
+      <tr>
+        <th>From</th>
+        <div class="24hr-example">
+          <input  formControlName="from" placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime" [format]="24"  readonly/>
+          <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+        </div>
+      </tr>
+    <br>
+      <tr>
+        <th>Until</th>
+        <div class="24hr-example">
+          <input formControlName="until" placeholder="24hr format" aria-label="24hr format" [ngxTimepicker]="fullTime1" [format]="24"  readonly/>
+          <ngx-material-timepicker #fullTime1></ngx-material-timepicker>
+        </div>
+      </tr>
+    <br>
+      <tr>
+          <th>Price</th>
+          <input currencyMask formControlName="price" [options]="{ prefix: '€', thousands: '.', decimal: ',', precision: 2 }"/>  
+        </tr>
+         <input mdbBtn class="btn btn-success"  type="submit" (click)= "onSubmit()">
+  </table>
+</form>
+
+<table>
+    <tr>
+        <th>Price</th>
+        <th>From</th>
+        <th>Until</th>
+    </tr>
+
+<tr *ngFor="let rate of rates">
+  <td>{{rate.price | currency:'EUR':true:'1.2-2'}}</td>
+  <td>{{getDate(rate.fromHour, rate.fromMinute) | date:'shortTime'}}</td>
+  <td>{{getDate(rate.untilHour, rate.untilMinute) | date:'shortTime'}}</td>
+  <td><button type="button" mdbBtn color="warning" (click)="onRemove(rate.id)">Remove</button></td>
+</tr>
+</table>

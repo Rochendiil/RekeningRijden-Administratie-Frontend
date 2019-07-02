@@ -1,0 +1,14 @@
+
+<button (click)="generateInvoices()">Generate</button>
+<table>
+    <tr>
+        <th>Uuid</th>
+        <th>Year</th>
+        <th>Month</th>
+    </tr>
+    <tr *ngFor="let invoice of invoices">
+        <td><a [routerLink]="['/invoice', invoice.id]">{{invoice.uuid}}</a></td>
+        <td>{{invoice.year}}</td>
+        <td>{{invoice.month}}</td>
+    </tr>
+</table>

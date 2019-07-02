@@ -1,0 +1,17 @@
+
+.add-btn {
+    padding: 6px;
+
+    background: #41d11d;
+    border: 1px solid darken(#41d11d, 20%);
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        background: lighten($color: #41d11d, $amount: 10%);
+    }
+    &::before {
+        content: "+ ";
+        font-size: 1.1em;
+    }
+}

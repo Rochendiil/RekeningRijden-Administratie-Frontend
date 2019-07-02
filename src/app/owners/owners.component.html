@@ -1,0 +1,12 @@
+<a class="add-btn" routerLink="/owner/new">Add owner</a>
+
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+    <tr *ngFor="let owner of owners">
+        <td><a [routerLink]="['/owner', owner.id]">{{owner.firstname}}</a></td>
+        <td><a [routerLink]="['/owner', owner.id]">{{owner.lastname}}</a></td>
+    </tr>
+</table>

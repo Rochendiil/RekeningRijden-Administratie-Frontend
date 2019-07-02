@@ -1,0 +1,8 @@
+$theme-color: #1289A7;
+$theme-color-dark: darken($theme-color, 5%);
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;       
+    box-shadow: $shadow;
+}

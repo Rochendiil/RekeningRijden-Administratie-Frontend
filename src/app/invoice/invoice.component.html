@@ -1,0 +1,26 @@
+
+
+<table class="invoice">
+    <tr>
+        <th>Uuid</th>
+        <td>{{invoice.uuid}}</td>
+    </tr>
+    <tr>
+        <th>Year</th>
+        <td>{{invoice.year}}</td>
+    </tr>
+    <tr>
+        <th>Month</th>
+        <td>{{invoice.month}}</td>
+    </tr>
+    <tr>
+        <th>TotalAmount</th>
+        <td>{{invoice.totalAmount}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button *ngIf="!!invoice.id" (click)="recalculateInvoice()">Recalculate</button>
+        </td>
+    </tr>
+</table>

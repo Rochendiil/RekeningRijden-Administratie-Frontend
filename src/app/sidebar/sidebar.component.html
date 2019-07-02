@@ -1,0 +1,2 @@
+<a class="sidebar-item" *ngFor="let item of items" [routerLink]="item.route">{{item.title}}</a>
+<a *ngIf="logoutbool" class="sidebar-item" (click)="logout()" href="">Logout</a> 

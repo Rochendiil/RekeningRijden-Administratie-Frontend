@@ -1,0 +1,34 @@
+
+<form [formGroup]="form">
+    <table>
+        <input type="hidden" formControlName="id">
+        <tr>
+            <th>Name</th>
+            <td><input type="text" formControlName="firstname"></td>
+        </tr>
+        <tr>
+            <th>Last name</th>
+            <td><input type="text" formControlName="lastname"></td>
+        </tr>
+        <tr>
+            <th>BSN</th>
+            <td><input type="text" formControlName="bsn"></td>
+        </tr>
+        <tr>
+            <th>Zipcode</th>
+            <td><input type="text" formControlName="zipcode"></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><input type="text" formControlName="address"></td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td><input type="text" formControlName="city"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button (click)="saveOwner()">Save</button></td>
+        </tr>
+    </table>
+</form>

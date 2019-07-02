@@ -1,0 +1,17 @@
+{
+    "tracker": [
+        { "trackerId": "FR_dd210441-a1a3-4cc3-89e7-42a7fc70bf39", "owner": "Harrie" },
+        { "trackerId": "FR_2333e671-d6cd-488b-b9aa-034c3fdb5247", "owner": "Sjaakie" }
+    ],
+    "invoice": [
+        { "id": 1, "ownerId": 1, "uuid": "1ee87f13-3435-4070-8212-3e34e881694b", "year": 2019, "month": "January", "totalAmount": 3.5 }
+    ],
+    "owner": [
+        { "id": 1, "firstname": "Harrie", "lastname": "Hansma", "address": "Ergens", "city": "Asten City", "zipcode": "3498FD" },
+        { "id": 2, "firstname": "Gerrie", "lastname": "Gerritsen", "address": "Nergens", "city": "Helmond", "zipcode": "3461SB" }
+    ],
+    "vehicle": [
+        { "id": 1, "brand": "BWM", "model": "Dikke", "licenseNumber": "ABCD", "buildYear": 2000, "trackerId": "FR_dd210441-a1a3-4cc3-89e7-42a7fc70bf39" },
+        { "id": 2, "brand": "Tesla", "model": "S", "licenseNumber": "EFGH", "buildYear": 2004, "trackerId": "FR_2333e671-d6cd-488b-b9aa-034c3fdb5247" }
+    ]
+}

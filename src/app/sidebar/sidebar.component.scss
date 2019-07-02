@@ -1,0 +1,17 @@
+@import '../../theme';
+
+.sidebar-item {
+    display: block;
+    padding: 10px;
+
+    text-decoration: none;
+    font-size: 1.3em;
+    color: whitesmoke;
+    border-bottom: 2px solid $theme-color-dark;
+
+    @include box-shadow(0 0 10px rgba($theme-color-dark, .7) inset);
+
+    &:hover {
+        background: lighten($theme-color, 5%);
+    }
+}

@@ -1,0 +1,18 @@
+<a class="add-btn" routerLink="/vehicle/new">Add vehicle</a>
+
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>License number</th>
+        <th>Build year</th>
+        <th>Tracker Id</th>
+    </tr>
+    <tr *ngFor="let vehicle of vehicles">
+        <td><a [routerLink]="['/vehicle', vehicle.id]">{{vehicle.brand}}</a></td>
+        <td>{{vehicle.model}}</td>
+        <td>{{vehicle.licenseNumber}}</td>
+        <td>{{vehicle.buildYear}}</td>
+        <td> <a [routerLink]="['/tracker', vehicle.trackerId]">{{vehicle.trackerId}}</a></td>
+    </tr>
+</table>
